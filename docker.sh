@@ -4,6 +4,9 @@
 #
 randomstring=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 8 | head -n 1)
 sleeptime=1
+mntsrc="~/atlas"
+mntdst="/root/atlas"
+mntopt="ro"
 container="blaeu"
 containerversion='latest'
 containerfullname="${container}_${containerversion}_${randomstring}"
@@ -17,7 +20,7 @@ echo "Running a new $container container version $containerversion interactively
 echo "####################################################################################################"
 sleep $sleeptime
 echo "Lauching $containerhostname"
-sudo docker run --name $containerfullname -h $containerhostname -it $containerpath /bin/bash
+sudo docker run --name $containerfullname -h $containerhostname -v $mntsrc:$mntdst:$mntopt -it $containerpath /bin/bash
 
 read -p "Do you wish to remove all docker containers and local data ? (y/N) " RESP
 if [ "$RESP" = "y" ]; then
