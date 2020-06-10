@@ -3,7 +3,7 @@
 ## Useful Links
 **Image Location :** [https://hub.docker.com/r/pilbbq/blaeu](https://hub.docker.com/r/pilbbq/blaeu)<br/>
 **Repo Location :** [https://github.com/pilbbq/blaeu-dockerimage](https://github.com/pilbbq/blaeu-dockerimage)<br/>
-**Blaeu Code Location: **[https://framagit.org/bortzmeyer/blaeu](https://framagit.org/bortzmeyer/blaeu)
+**Blaeu Code Location:** [https://framagit.org/bortzmeyer/blaeu](https://framagit.org/bortzmeyer/blaeu)
 
 ## Diff with original debian
 We just `pip3 install blaeu` in addition to [the changes in the original image](https://github.com/pilbbq/debian-custom-dockerimage)
