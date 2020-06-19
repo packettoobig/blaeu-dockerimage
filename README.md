@@ -9,7 +9,8 @@
 We just `pip3 install blaeu` in addition to [the changes in the original image](https://github.com/pilbbq/debian-custom-dockerimage)
 
 ## How to use
-The *docker.sh* script can be used as-is on a sudo-enabled machine (if docker is installed of course), see [https://get.docker.com/](https://get.docker.com/)  for info about that.<br/>
+The *docker.sh* script can be used as-is on a sudo-enabled machine running bash.<br/>
+You will of course need docker to be installed. Please refer to [https://get.docker.com/](https://get.docker.com/) for information on this subject.
 
 The script assumes you have a `.atlas/auth` file in your `$HOME` and mounts it to the same location in the docker file.
 
