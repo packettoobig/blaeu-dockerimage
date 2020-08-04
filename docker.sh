@@ -4,7 +4,7 @@
 # VARIABLES
 #
 randomstring=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 8 | head -n 1)
-sleeptime=1
+sleeptime=0
 mntsrc="$HOME/.atlas"
 mntdst="/root/.atlas"
 mntopt="ro"
@@ -22,13 +22,16 @@ echo "Running a new $container container version $containerversion interactively
 echo "####################################################################################################"
 sleep $sleeptime
 echo "Lauching $containerhostname"
-sudo docker run --name $containerfullname -h $containerhostname -v $mntsrc:$mntdst:$mntopt -it $containerpath /bin/bash
+sudo docker run --name $containerfullname -h $containerhostname \
+	-v $mntsrc:$mntdst:$mntopt \
+	-it $containerpath /bin/bash
 
-read -p "Do you wish to remove all docker containers and local data ? [y/N] " RESP
+sudo docker system df | awk '{print $1,$4}' | column -t
+read -p "Do you wish to remove all local docker data ? [y/N] " RESP
 if [ "$RESP" = "y" ] || [ "$RESP" = "yes" ]; then
   echo -e "Removing everything ... \n"
   sudo docker container stop $(sudo docker container ls -aq)
   sudo docker system prune -a -f
 else
-  echo -e "Exiting without removing anything \n"
+  echo "Exiting (nothing removed)"
 fi
