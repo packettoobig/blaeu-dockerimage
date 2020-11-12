@@ -6,7 +6,7 @@
 **Blaeu Code Location:** [https://framagit.org/bortzmeyer/blaeu](https://framagit.org/bortzmeyer/blaeu)
 
 ## Diff with original debian
-We just `pip3 install blaeu` in addition to [the changes in the original image](https://github.com/pilbbq/debian-custom-dockerimage)
+We just `pip3 install blaeu` in addition to [the changes in the original image](https://github.com/packettoobig/debian-custom-dockerimage)
 
 ## How to use
 The *docker.sh* script can be used as-is on a sudo-enabled machine running bash.<br/>
