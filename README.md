@@ -2,7 +2,7 @@
 
 ## Useful Links
 **Image Location :** [https://hub.docker.com/r/pilbbq/blaeu](https://hub.docker.com/r/pilbbq/blaeu)<br/>
-**Repo Location :** [https://github.com/pilbbq/blaeu-dockerimage](https://github.com/pilbbq/blaeu-dockerimage)<br/>
+**Repo Location :** [https://github.com/packettoobig/blaeu-dockerimage](https://github.com/packettoobig/blaeu-dockerimage)<br/>
 **Blaeu Code Location:** [https://framagit.org/bortzmeyer/blaeu](https://framagit.org/bortzmeyer/blaeu)
 
 ## Diff with original debian
