@@ -1,7 +1,7 @@
 # blaeu-dockerimage
 
 ## Useful Links
-**Image Location :** [https://hub.docker.com/r/pilbbq/blaeu](https://hub.docker.com/r/pilbbq/blaeu)<br/>
+**Image Location :** [https://hub.docker.com/r/packettoobig/blaeu](https://hub.docker.com/r/packettoobig/blaeu)<br/>
 **Repo Location :** [https://github.com/packettoobig/blaeu-dockerimage](https://github.com/packettoobig/blaeu-dockerimage)<br/>
 **Blaeu Code Location:** [https://framagit.org/bortzmeyer/blaeu](https://framagit.org/bortzmeyer/blaeu)
 
@@ -19,10 +19,10 @@ Then, put it in `~/.atlas/auth`. No formatting required.
 
 Once you have docker and your RIPE Atlas API key, just :
 
-	git clone https://github.com/pilbbq/blaeu-dockerimage.git
+	git clone https://github.com/packettoobig/blaeu-dockerimage.git
 	cd debian-custom-dockerimage
 	./docker.sh
 
 ## Misc
 Image is built everytime there is a commit to this repo.<br/>
-You can see the latest builds here : [https://hub.docker.com/r/pilbbq/blaeu/builds](https://hub.docker.com/r/pilbbq/blaeu/builds)
+You can see the latest builds here : [https://hub.docker.com/r/packettoobig/blaeu/builds](https://hub.docker.com/r/packettoobig/blaeu/builds)

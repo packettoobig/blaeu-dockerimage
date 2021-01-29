@@ -11,7 +11,7 @@ mntopt="ro"
 container="blaeu"
 containerversion='latest'
 containerfullname="${container}_${containerversion}_${randomstring}"
-containerpath="pilbbq/$container:$containerversion"
+containerpath="packettoobig/$container:$containerversion"
 containerhostname="container-$container-$randomstring"
 
 #
