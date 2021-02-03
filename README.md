@@ -8,8 +8,8 @@
 
 ## How to use
 
-The main prerequisite is to have a RIPE Atlas API key.
-You will of course need docker to be installed.
+The main prerequisite is to have a RIPE Atlas API key.  
+You will of course need docker to be installed.  
 Please refer to [https://get.docker.com/](https://get.docker.com/) for information on this subject.
 
 To get it, go to [https://atlas.ripe.net/keys/](https://atlas.ripe.net/keys/), and create a new one with "**Schedule a new measurement"** permissions.
