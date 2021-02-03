@@ -21,7 +21,7 @@ Once you get it, you can use the following example:
 
 ### Lite Image
 
-The lite (and main) image is alpine-based and ready-to-use.
+The lite (and main) image is python-based and ready-to-use.
 Just run :
 
     sudo docker run -v $HOME/.atlas:/root/.atlas:ro packettoobig/blaeu

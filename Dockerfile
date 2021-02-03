@@ -1,10 +1,9 @@
 # BEGIN
-FROM alpine
+FROM python:slim
 WORKDIR /root
+CMD ["--help"]
 COPY requirements.txt ./
-RUN apk -qq update && \
-    apk -qq add py-pip && \
-    pip3 install -r requirements.txt && \
+RUN pip3 install --no-cache-dir -r requirements.txt && \
     rm -rf requirements.txt
 CMD ["blaeu-reach","--help"]
 # END
