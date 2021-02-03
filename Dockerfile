@@ -9,6 +9,5 @@ RUN apt-get -qq update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf requirements.txt
-ENTRYPOINT ["blaeu-reach"]
-CMD ["--help"]
+CMD ["blaeu-reach","--help"]
 # END
