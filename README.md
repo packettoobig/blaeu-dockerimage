@@ -12,7 +12,7 @@ We just `pip3 install blaeu` on a base alpine image.
 
 ## How to use
 
-You can simply run `docker run packettoobig/blaeu`
+You can simply run `docker run packettoobig/blaeu:alpine`
 
 The script assumes you have a `.atlas/auth` file in your `$HOME` and mounts in to the same location as the docker file.
 
