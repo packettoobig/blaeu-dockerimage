@@ -24,16 +24,16 @@ Once you get it, you can use the following example:
 The lite (and main) image is alpine-based and ready-to-use.
 Just run :
 
-    docker run -v $HOME/.atlas:/root/.atlas:ro packettoobig/blaeu
+    sudo docker run -v $HOME/.atlas:/root/.atlas:ro packettoobig/blaeu
 
 It will display the `blaeu-reach` help menu.
 
 Here are some examples of what you can do :
 
-    docker run -v $HOME/.atlas:/root/.atlas:ro packettoobig/blaeu blaeu-reach 1.1.1.1
-    docker run -v $HOME/.atlas:/root/.atlas:ro packettoobig/blaeu blaeu-traceroute 2600::
-    docker run -v $HOME/.atlas:/root/.atlas:ro packettoobig/blaeu blaeu-resolve gnu.org
-    docker run -v $HOME/.atlas:/root/.atlas:ro packettoobig/blaeu blaeu-cert www.eff.org
+    sudo docker run -v $HOME/.atlas:/root/.atlas:ro packettoobig/blaeu blaeu-reach 1.1.1.1
+    sudo docker run -v $HOME/.atlas:/root/.atlas:ro packettoobig/blaeu blaeu-traceroute 2600::
+    sudo docker run -v $HOME/.atlas:/root/.atlas:ro packettoobig/blaeu blaeu-resolve gnu.org
+    sudo docker run -v $HOME/.atlas:/root/.atlas:ro packettoobig/blaeu blaeu-cert www.eff.org
 
 ### Full Image
 
