@@ -1,13 +1,10 @@
 # BEGIN
-FROM packettoobig/debian
+FROM alpine
 WORKDIR /root
 COPY requirements.txt ./
-RUN apt-get -qq update && \
-    apt-get -qq install python3-pip && \
+RUN apk -qq update && \
+    apk -qq add py-pip && \
     pip3 install -r requirements.txt && \
-    apt-get -qq purge lib-*dev build-essential &&\
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* && \
     rm -rf requirements.txt
 ENTRYPOINT ["blaeu-reach"]
 CMD ["--help"]
