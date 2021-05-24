@@ -22,7 +22,7 @@ echo "Running a new $container container version $containerversion interactively
 echo "####################################################################################################"
 sleep $sleeptime
 echo "Lauching $containerhostname"
-sudo docker run --name $containerfullname -h $containerhostname \
+sudo docker run --rm --name $containerfullname -h $containerhostname \
 	-v $mntsrc:$mntdst:$mntopt \
 	-it $containerpath /bin/bash
 
