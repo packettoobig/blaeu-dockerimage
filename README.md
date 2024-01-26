@@ -16,24 +16,26 @@ To get it, go to [https://atlas.ripe.net/keys/](https://atlas.ripe.net/keys/), a
 
 Once you get it, you can use the following example:
 
-    mkdir -p ~/.atlas
-    echo "MYAPIKEY" > ~/.atlas/auth
+Store securely your api key in the variable `${ATLASAUTH}` for later une as an envvar in the container
+
+    read -r -s -p "API KEY ? " ATLASAUTH
+    API KEY ? # enter your api key here
 
 ### Lite Image
 
 The lite (and main) image is python-based and ready-to-use.
 Just run :
 
-    sudo docker run -v $HOME/.atlas:/root/.atlas:ro packettoobig/blaeu
+    sudo docker run --env ATLASAUTH=${ATLASAUTH} packettoobig/blaeu
 
 It will display the `blaeu-reach` help menu.
 
 Here are some examples of what you can do :
 
-    sudo docker run -v $HOME/.atlas:/root/.atlas:ro packettoobig/blaeu blaeu-reach 1.1.1.1
-    sudo docker run -v $HOME/.atlas:/root/.atlas:ro packettoobig/blaeu blaeu-traceroute 2600::
-    sudo docker run -v $HOME/.atlas:/root/.atlas:ro packettoobig/blaeu blaeu-resolve gnu.org
-    sudo docker run -v $HOME/.atlas:/root/.atlas:ro packettoobig/blaeu blaeu-cert www.eff.org
+    sudo docker run --env ATLASAUTH=${ATLASAUTH} packettoobig/blaeu blaeu-reach 1.1.1.1
+    sudo docker run --env ATLASAUTH=${ATLASAUTH} packettoobig/blaeu blaeu-traceroute 2600::
+    sudo docker run --env ATLASAUTH=${ATLASAUTH} packettoobig/blaeu blaeu-resolve gnu.org
+    sudo docker run --env ATLASAUTH=${ATLASAUTH} packettoobig/blaeu blaeu-cert www.eff.org
 
 ### Full Image
 
